@@ -1373,6 +1373,10 @@ async function submitForm() {
     submissionURL: window.location.href,
   };
 
+  // Generate a unique event ID for Facebook deduplication
+  // This prevents Facebook from counting the same Lead event twice
+  const fbEventID = 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+ 
   try {
     await fetch('https://hook.us2.make.com/332cozc0nvke7hlwo5ucqbm4e2hirf27', {
       method:'POST',
@@ -1380,7 +1384,13 @@ async function submitForm() {
       body: JSON.stringify(payload),
     });
     if (!isAmber) {
-      fbq('track','Lead',{content_name:'Solar ROI Qualifier',lead_status:'green',value:systemCost});
+      fbq('track', 'Lead', {
+        content_name: 'Solar ROI Qualifier',
+        lead_status: 'green',
+        value: systemCost
+      }, {
+        eventID: fbEventID
+      });
     }
   } catch(e) { console.error('Webhook error', e); }
 
