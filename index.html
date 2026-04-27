@@ -1520,7 +1520,7 @@ function showGreenResult(payback, monthly, roi, cumSavings, sysCost, monthlyTota
   });
 
   // WhatsApp CTA
-  const msg = `Hi! I just completed the Tubalcain Solar ROI Assessment and my home QUALIFIED (Green). My results: ${payback.toFixed(1)}-year payback, ₦${Math.round(monthly).toLocaleString()}/month savings. I'd like to book my free energy assessment. My name is ${document.getElementById('firstName').value}.`;
+  const msg = `Hi! I just completed the Elup Profound Solar ROI Assessment and my home QUALIFIED (Green). My results: ${payback.toFixed(1)}-year payback, ₦${Math.round(monthly).toLocaleString()}/month savings. I'd like to book my free energy assessment. My name is ${document.getElementById('firstName').value}.`;
   document.getElementById('greenCTA').href = `https://wa.me/2348024577725?text=${encodeURIComponent(msg)}`;
 
   document.getElementById('resultGreen').classList.add('show');
@@ -1556,7 +1556,7 @@ function showAmberResult(payback, monthly, name) {
     issueList.appendChild(li);
   });
 
-  const msg = `Hi! I completed the Tubalcain Solar ROI Assessment. My home got a YELLOW result, some areas need checking. I'd like to book a free professional home assessment. My name is ${name}.`;
+  const msg = `Hi! I completed the Elup Profound Solar ROI Assessment. My home got a YELLOW result, some areas need checking. I'd like to book a free professional home assessment. My name is ${name}.`;
   document.getElementById('amberCTA').href = `https://wa.me/2348024577725?text=${encodeURIComponent(msg)}`;
 
   document.getElementById('resultAmber').classList.add('show');
