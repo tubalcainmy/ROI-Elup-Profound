@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Find Out If Solar Makes Financial Sense For Your Home Free 3-Minute Assessment</title>
+<title>Find Out If Solar Makes Financial Sense For Your Home — Free 3-Minute Assessment</title>
 
 <!-- Meta Pixel -->
 <script>
@@ -620,7 +620,7 @@ body::after{
     </label>
     <label class="option" data-val="over120k" data-nepa="60000" data-fuel="90000">
       <div class="option-radio"></div>
-      <div><div class="option-text">Over ₦120,000 / month</div><div class="option-sub">High energy user — solar ROI is fastest here</div></div>
+      <div><div class="option-text">Over ₦120,000 / month</div><div class="option-sub">High energy user, solar ROI is fastest here</div></div>
     </label>
   </div>
   <button class="next-btn" id="q1-next" disabled onclick="nextQ(1)">Continue <span class="arrow">→</span></button>
@@ -638,19 +638,19 @@ body::after{
     </label>
     <label class="option" data-val="renter-permission">
       <div class="option-radio"></div>
-      <div><div class="option-text">I rent — and I have my landlord's written permission</div></div>
+      <div><div class="option-text">I rent, and I have my landlord's written permission</div></div>
     </label>
     <label class="option" data-val="family">
       <div class="option-radio"></div>
-      <div><div class="option-text">Family house — I have authority to install</div></div>
+      <div><div class="option-text">Family house, I have authority to install</div></div>
     </label>
     <label class="option" data-val="renter-no">
       <div class="option-radio"></div>
-      <div><div class="option-text">I rent — but I do not have landlord's permission</div></div>
+      <div><div class="option-text">I rent, but I do not have landlord's permission</div></div>
     </label>
     <label class="option" data-val="renter-unknown">
       <div class="option-radio"></div>
-      <div><div class="option-text">I rent — I'm not sure if I can get permission</div></div>
+      <div><div class="option-text">I rent, I'm not sure if I can get permission</div></div>
     </label>
   </div>
   <button class="next-btn" id="q2-next" disabled onclick="nextQ(2)">Continue <span class="arrow">→</span></button>
@@ -664,11 +664,11 @@ body::after{
   <div class="options" id="q3-opts">
     <label class="option" data-val="0-14days">
       <div class="option-radio"></div>
-      <div><div class="option-text">Immediately — within the next 2 weeks</div></div>
+      <div><div class="option-text">Immediately, within the next 2 weeks</div></div>
     </label>
     <label class="option" data-val="2-4weeks">
       <div class="option-radio"></div>
-      <div><div class="option-text">Soon — within the next month</div></div>
+      <div><div class="option-text">Soon, within the next month</div></div>
     </label>
     <label class="option" data-val="1-3months">
       <div class="option-radio"></div>
@@ -680,77 +680,148 @@ body::after{
     </label>
     <label class="option" data-val="info-only">
       <div class="option-radio"></div>
-      <div><div class="option-text">Just gathering information — no firm timeline</div></div>
+      <div><div class="option-text">Just gathering information, no firm timeline</div></div>
     </label>
   </div>
   <button class="next-btn" id="q3-next" disabled onclick="nextQ(3)">Continue <span class="arrow">→</span></button>
 </div>
 
-<!-- Q4: Budget gate -->
+<!-- Q4: Budget gate (budget leads, system size as sub-line) -->
 <div class="q-card" id="q4">
   <div class="q-num">Question 4 of 13</div>
-  <div class="q-text">What is your approximate budget for the solar system installation?</div>
-  <div class="q-hint">This helps match you to the right system size and installer for your budget.</div>
+  <div class="q-text">What is your budget for the solar installation?</div>
+  <div class="q-hint">Select your budget range. The system size you can install is shown under each option, this helps match you with the right certified installer.</div>
   <div class="options" id="q4-opts">
-    <label class="option" data-val="under500k" data-cost="350000">
+    <label class="option" data-val="under500k" data-cost="350000" data-size="Below minimum" data-budget-label="Under ₦500,000">
       <div class="option-radio"></div>
-      <div><div class="option-text">Under ₦500,000</div></div>
+      <div>
+        <div class="option-text">Under ₦500,000</div>
+        <div class="option-sub">1kWh . small power stations</div>
+      </div>
     </label>
-    <label class="option" data-val="500k-1m" data-cost="750000">
+    <label class="option" data-val="500k-1m" data-cost="750000" data-size="Below minimum" data-budget-label="₦500,000 – ₦1,000,000">
       <div class="option-radio"></div>
-      <div><div class="option-text">₦500,000 – ₦1,000,000</div></div>
+      <div>
+        <div class="option-text">₦500,000 - ₦1,000,000</div>
+        <div class="option-sub">2kWh - 2000W . Portable power stations</div>
+      </div>
     </label>
-    <label class="option" data-val="1m-1.5m" data-cost="1250000">
+    <label class="option" data-val="1m-1.5m" data-cost="1250000" data-size="Below minimum" data-budget-label="₦1,000,000 – ₦1,500,000">
       <div class="option-radio"></div>
-      <div><div class="option-text">₦1,000,000 – ₦1,500,000</div></div>
+      <div>
+        <div class="option-text">₦1,000,000 - ₦1,500,000</div>
+        <div class="option-sub">1kVA - 2kVA . Lights, fans, TV, and laptop charging</div>
+      </div>
     </label>
-    <label class="option" data-val="1.5m-2.5m" data-cost="2000000">
+    <label class="option" data-val="2m-5m" data-cost="3500000" data-size="2.5 – 5 kVA" data-budget-label="₦2,000,000 – ₦5,000,000">
       <div class="option-radio"></div>
-      <div><div class="option-text">₦1,500,000 – ₦2,500,000</div></div>
+      <div>
+        <div class="option-text">₦2,000,000 - ₦5,000,000</div>
+        <div class="option-sub">System size: 2.5 – 5 kVA · Small home — lights, fans, fridge, TV</div>
+      </div>
     </label>
-    <label class="option" data-val="2.5m-4m" data-cost="3250000">
+    <label class="option" data-val="5m-5.8m" data-cost="5400000" data-size="5 – 7.5 kVA" data-budget-label="₦5,000,000 – ₦5,800,000">
       <div class="option-radio"></div>
-      <div><div class="option-text">₦2,500,000 – ₦4,000,000</div></div>
+      <div>
+        <div class="option-text">₦5,000,000 - ₦5,800,000</div>
+        <div class="option-sub">System size: 5 – 7.5 kVA · Medium home — above + AC unit</div>
+      </div>
     </label>
-    <label class="option" data-val="over4m" data-cost="5000000">
+    <label class="option" data-val="5.8m-7.5m" data-cost="6150000" data-size="7.5 – 10 kVA" data-budget-label="₦5,800,000 – ₦7,500,000">
       <div class="option-radio"></div>
-      <div><div class="option-text">Over ₦4,000,000</div><div class="option-sub">Large home or commercial installation</div></div>
+      <div>
+        <div class="option-text">₦5,800,000 – ₦7,500,000</div>
+        <div class="option-sub">System size: 7.5 - 10 kVA · Large home — full house power</div>
+      </div>
+    </label>
+    <label class="option" data-val="over7.5m" data-cost="7500000" data-size="10 kVA+" data-budget-label="₦7,500,000+">
+      <div class="option-radio"></div>
+      <div>
+        <div class="option-text">₦7,500,000 and above</div>
+        <div class="option-sub">System size: 10 kVA+ · Large property or commercial use</div>
+      </div>
+    </label>
+    <label class="option" data-val="not-sure-budget" data-cost="2000000" data-size="To be assessed" data-budget-label="Not sure yet">
+      <div class="option-radio"></div>
+      <div>
+        <div class="option-text">Not sure yet - I need a quote first</div>
+        <div class="option-sub">A certified installer will assess your home and recommend the right system and budget</div>
+      </div>
     </label>
   </div>
   <button class="next-btn" id="q4-next" disabled onclick="nextQ(4)">Continue <span class="arrow">→</span></button>
 </div>
 
-<!-- Q5: Open to quotation gate -->
+
+<!-- Q5: Proof of Funds confirmation -->
 <div class="q-card" id="q5">
   <div class="q-num">Question 5 of 13</div>
-  <div class="q-text">If your home checks out, are you open to receiving a personalised solar quotation from a certified installer in your city?</div>
-  <div class="q-hint">No pressure, no obligation. Our partners only contact homeowners who are genuinely ready to review a proposal.</div>
+  <div class="q-text">Can you confirm your budget in writing right now via WhatsApp?</div>
+  <div class="q-hint">This helps us verify that your installation can proceed without financial delays. A certified installer will not visit a site without confirmed budget availability.</div>
   <div class="options" id="q5-opts">
-    <label class="option" data-val="yes">
+    <label class="option" data-val="proof-now">
       <div class="option-radio"></div>
-      <div><div class="option-text">Yes — send me a quotation</div></div>
+      <div>
+        <div class="option-text">Yes, I can send proof immediately</div>
+        <div class="option-sub">Bank statement, savings balance, or written confirmation</div>
+      </div>
     </label>
-    <label class="option" data-val="maybe">
+    <label class="option" data-val="proof-24hrs">
       <div class="option-radio"></div>
-      <div><div class="option-text">Maybe — I'd like to see the options first</div></div>
+      <div>
+        <div class="option-text">I can send it within 24 hours</div>
+        <div class="option-sub">I have the funds but need a short time to prepare the documentation</div>
+      </div>
     </label>
-    <label class="option" data-val="no">
+    <label class="option" data-val="proof-few-days" data-disqualify="true">
       <div class="option-radio"></div>
-      <div><div class="option-text">No — I'm not ready to receive a quotation</div></div>
+      <div>
+        <div class="option-text">I'll need a few days</div>
+        <div class="option-sub">Budget is not immediately accessible</div>
+      </div>
+    </label>
+    <label class="option" data-val="proof-discuss" data-disqualify="true">
+      <div class="option-radio"></div>
+      <div>
+        <div class="option-text">I'd rather discuss first</div>
+        <div class="option-sub">I prefer to talk before confirming finances</div>
+      </div>
     </label>
   </div>
   <button class="next-btn" id="q5-next" disabled onclick="nextQ(5)">Continue <span class="arrow">→</span></button>
 </div>
 
-<!-- Q6: Already with installer gate -->
+<!-- Q6: Open to quotation gate -->
 <div class="q-card" id="q6">
   <div class="q-num">Question 6 of 13</div>
-  <div class="q-text">Are you currently in active discussions with another solar installer?</div>
-  <div class="q-hint">We connect you with certified installers who serve homeowners who haven't yet committed to another provider.</div>
+  <div class="q-text">If your home checks out, are you ready to make a decision and sign within 90 days?</div>
+  <div class="q-hint">No pressure, no obligation. Our partners only contact homeowners who are genuinely ready to review a proposal.</div>
   <div class="options" id="q6-opts">
+    <label class="option" data-val="yes">
+      <div class="option-radio"></div>
+      <div><div class="option-text">Yes, definitely</div></div>
+    </label>
+    <label class="option" data-val="maybe">
+      <div class="option-radio"></div>
+      <div><div class="option-text">Probably, but I need to discuss with family</div></div>
+    </label>
+    <label class="option" data-val="no">
+      <div class="option-radio"></div>
+      <div><div class="option-text">No, I'm just gathering information</div></div>
+    </label>
+  </div>
+  <button class="next-btn" id="q6-next" disabled onclick="nextQ(6)">Continue <span class="arrow">→</span></button>
+</div>
+
+<!-- Q7: Already with installer gate -->
+<div class="q-card" id="q7">
+  <div class="q-num">Question 7 of 13</div>
+  <div class="q-text">Are you currently comparing quotes from other installers?</div>
+  <div class="q-hint">We connect you with certified installers who serve homeowners who haven't yet committed to another provider.</div>
+  <div class="options" id="q7-opts">
     <label class="option" data-val="no-installer">
       <div class="option-radio"></div>
-      <div><div class="option-text">No — I haven't spoken to any installer yet</div></div>
+      <div><div class="option-text">No, you'll be the first</div></div>
     </label>
     <label class="option" data-val="browsing">
       <div class="option-radio"></div>
@@ -758,21 +829,21 @@ body::after{
     </label>
     <label class="option" data-val="have-price">
       <div class="option-radio"></div>
-      <div><div class="option-text">I have a price but am open to compare options</div></div>
+      <div><div class="option-text">Yes, but I'm open to comparing</div></div>
     </label>
     <label class="option" data-val="in-talks">
       <div class="option-radio"></div>
-      <div><div class="option-text">Yes — I'm in active talks / about to sign with someone</div></div>
+      <div><div class="option-text">Yes, and I'm close to signing with someone</div></div>
     </label>
   </div>
-  <button class="next-btn" id="q6-next" disabled onclick="nextQ(6)">Continue <span class="arrow">→</span></button>
+  <button class="next-btn" id="q7-next" disabled onclick="nextQ(7)">Continue <span class="arrow">→</span></button>
 </div>
 
 <!-- Q7: Building type (safety) -->
-<div class="q-card" id="q7">
-  <div class="q-num">Question 7 of 13</div>
+<div class="q-card" id="q8">
+  <div class="q-num">Question 8 of 13</div>
   <div class="q-text">What type of building is this?</div>
-  <div class="options" id="q7-opts">
+  <div class="options" id="q8-opts">
     <label class="option" data-val="bungalow">
       <div class="option-radio"></div>
       <div><div class="option-text">Bungalow</div></div>
@@ -794,15 +865,15 @@ body::after{
       <div><div class="option-text">Other</div></div>
     </label>
   </div>
-  <button class="next-btn" id="q7-next" disabled onclick="nextQ(7)">Continue <span class="arrow">→</span></button>
+  <button class="next-btn" id="q8-next" disabled onclick="nextQ(8)">Continue <span class="arrow">→</span></button>
 </div>
 
 <!-- Q8: Roof condition -->
-<div class="q-card" id="q8">
-  <div class="q-num">Question 8 of 13</div>
+<div class="q-card" id="q9">
+  <div class="q-num">Question 9 of 13</div>
   <div class="q-text">What is the current condition of your roof?</div>
-  <div class="q-hint">Solar panels are mounted on the roof — a weak or leaking roof must be repaired before installation.</div>
-  <div class="options" id="q8-opts">
+  <div class="q-hint">Solar panels are mounted on the roof, a weak or leaking roof must be repaired before installation.</div>
+  <div class="options" id="q9-opts">
     <label class="option" data-val="solid" data-safe="1">
       <div class="option-radio"></div>
       <div><div class="option-text">Solid and completely leak-free</div></div>
@@ -820,44 +891,44 @@ body::after{
       <div><div class="option-text">Not sure</div></div>
     </label>
   </div>
-  <button class="next-btn" id="q8-next" disabled onclick="nextQ(8)">Continue <span class="arrow">→</span></button>
+  <button class="next-btn" id="q9-next" disabled onclick="nextQ(9)">Continue <span class="arrow">→</span></button>
 </div>
 
 <!-- Q9: Shading -->
-<div class="q-card" id="q9">
-  <div class="q-num">Question 9 of 13</div>
+<div class="q-card" id="q10">
+  <div class="q-num">Question 10 of 13</div>
   <div class="q-text">Are there trees or tall buildings that significantly shade your roof?</div>
   <div class="q-hint">Shading reduces panel output. Our installer will assess the exact impact during the site visit.</div>
-  <div class="options" id="q9-opts">
+  <div class="options" id="q10-opts">
     <label class="option" data-val="no-shade" data-safe="1">
       <div class="option-radio"></div>
-      <div><div class="option-text">No — the roof gets full sunlight</div></div>
+      <div><div class="option-text">No, the roof gets full sunlight</div></div>
     </label>
     <label class="option" data-val="partial-shade" data-safe="0">
       <div class="option-radio"></div>
-      <div><div class="option-text">Some shading — partial sunlight</div></div>
+      <div><div class="option-text">Some shading, partial sunlight</div></div>
     </label>
     <label class="option" data-val="heavy-shade" data-safe="0">
       <div class="option-radio"></div>
-      <div><div class="option-text">Yes — significant shading</div></div>
+      <div><div class="option-text">Yes, significant shading</div></div>
     </label>
     <label class="option" data-val="shade-unsure" data-safe="0">
       <div class="option-radio"></div>
       <div><div class="option-text">Not sure</div></div>
     </label>
   </div>
-  <button class="next-btn" id="q9-next" disabled onclick="nextQ(9)">Continue <span class="arrow">→</span></button>
+  <button class="next-btn" id="q10-next" disabled onclick="nextQ(10)">Continue <span class="arrow">→</span></button>
 </div>
 
 <!-- Q10: Electrical issues -->
-<div class="q-card" id="q10">
-  <div class="q-num">Question 10 of 13</div>
+<div class="q-card" id="q11">
+  <div class="q-num">Question 11 of 13</div>
   <div class="q-text">Has your home experienced any of the following electrical problems?</div>
   <div class="q-hint">Select the most accurate description.</div>
-  <div class="options" id="q10-opts">
+  <div class="options" id="q11-opts">
     <label class="option" data-val="none" data-safe="1">
       <div class="option-radio"></div>
-      <div><div class="option-text">None — no electrical issues</div></div>
+      <div><div class="option-text">None, no electrical issues</div></div>
     </label>
     <label class="option" data-val="tripping" data-safe="0">
       <div class="option-radio"></div>
@@ -876,44 +947,16 @@ body::after{
       <div><div class="option-text">Past electrical fire</div></div>
     </label>
   </div>
-  <button class="next-btn" id="q10-next" disabled onclick="nextQ(10)">Continue <span class="arrow">→</span></button>
-</div>
-
-<!-- Q11: System size preference -->
-<div class="q-card" id="q11">
-  <div class="q-num">Question 11 of 13</div>
-  <div class="q-text">What system size are you considering?</div>
-  <div class="q-hint">Your certified installer will confirm the exact size during your free energy assessment.</div>
-  <div class="options" id="q11-opts">
-    <label class="option" data-val="3-5kva">
-      <div class="option-radio"></div>
-      <div><div class="option-text">3.5 – 5 kVA</div><div class="option-sub">Small home — lights, fans, fridge, TV</div></div>
-    </label>
-    <label class="option" data-val="5-7.5kva">
-      <div class="option-radio"></div>
-      <div><div class="option-text">5 – 7.5 kVA</div><div class="option-sub">Medium home — above + AC unit</div></div>
-    </label>
-    <label class="option" data-val="7.5-10kva">
-      <div class="option-radio"></div>
-      <div><div class="option-text">7.5 – 10 kVA</div><div class="option-sub">Large home — full house power</div></div>
-    </label>
-    <label class="option" data-val="10kva-plus">
-      <div class="option-radio"></div>
-      <div><div class="option-text">10 kVA+</div><div class="option-sub">Large property or commercial use</div></div>
-    </label>
-    <label class="option" data-val="not-sure-size">
-      <div class="option-radio"></div>
-      <div><div class="option-text">Not sure — I need an assessment first</div></div>
-    </label>
-  </div>
   <button class="next-btn" id="q11-next" disabled onclick="nextQ(11)">Continue <span class="arrow">→</span></button>
 </div>
+
+<!-- Q11 (system size) removed — merged into Q4 -->
 
 <!-- Q12: Battery type preference -->
 <div class="q-card" id="q12">
   <div class="q-num">Question 12 of 13</div>
   <div class="q-text">Do you have a battery preference for your solar system?</div>
-  <div class="q-hint">Battery type affects your system's lifespan and replacement schedule — this goes into your ROI calculation.</div>
+  <div class="q-hint">Battery type affects your system's lifespan and replacement schedule, this goes into your ROI calculation.</div>
   <div class="options" id="q12-opts">
     <label class="option" data-val="lithium" data-battery="lithium">
       <div class="option-radio"></div>
@@ -925,7 +968,7 @@ body::after{
     </label>
     <label class="option" data-val="battery-unsure" data-battery="lithium">
       <div class="option-radio"></div>
-      <div><div class="option-text">Not sure — let the installer recommend</div></div>
+      <div><div class="option-text">Not sure, let the installer recommend</div></div>
     </label>
   </div>
   <button class="next-btn" id="q12-next" disabled onclick="nextQ(12)">Continue <span class="arrow">→</span></button>
@@ -963,7 +1006,7 @@ body::after{
   <div class="dq-title">Solar May Not Be Right for You Yet</div>
   <div class="dq-body">Based on your current energy spend, a full solar installation is unlikely to give you a strong return on investment right now. The payback period would be too long to make financial sense.</div>
   <ul class="dq-reason-box">
-    <li>Combined spend below ₦30,000/month — ROI window exceeds 10 years</li>
+    <li>Combined spend below ₦30,000/month, ROI window exceeds 10 years</li>
     <li>Solar investment is most profitable for homeowners spending ₦30k+ monthly</li>
     <li>Your energy costs don't yet justify a ₦1.5M+ system investment</li>
   </ul>
@@ -974,22 +1017,22 @@ body::after{
 <div class="dq-page" id="dq-ownership">
   <div class="dq-icon">🏠</div>
   <div class="dq-title">Property Authority Required for Solar</div>
-  <div class="dq-body">Solar installation requires consent from the property owner. Without written landlord permission, our certified installers cannot proceed — this protects both you and the property owner legally.</div>
+  <div class="dq-body">Solar installation requires consent from the property owner. Without written landlord permission, our certified installers cannot proceed, this protects both you and the property owner legally.</div>
   <ul class="dq-reason-box">
     <li>Panels are a permanent structural modification to the roof</li>
     <li>Installers require documented permission before any work begins</li>
     <li>Getting landlord permission is often simpler than expected</li>
   </ul>
-  <div class="dq-body">If you can obtain written permission from your landlord, come back and complete this assessment — many renters successfully install solar once they have it in writing.</div>
+  <div class="dq-body">If you can obtain written permission from your landlord, come back and complete this assessment, many renters successfully install solar once they have it in writing.</div>
   <a href="https://wa.me/2347071194277?text=Hi, I'm a renter interested in solar. Can you help me understand the landlord permission process?" class="dq-alt-btn" target="_blank">Ask Us About the Permission Process →</a>
 </div>
 
 <div class="dq-page" id="dq-timeline">
   <div class="dq-icon">📅</div>
   <div class="dq-title">Come Back When You're Ready to Install</div>
-  <div class="dq-body">Our certified installers are best matched with homeowners who have a confirmed installation window within 90 days. This ensures you get the most relevant pricing and availability.</div>
+  <div class="dq-body">Our certified installers are best matched with homeowners who have a confirmed installation window. This ensures you get the most relevant pricing and availability.</div>
   <ul class="dq-reason-box">
-    <li>Solar pricing and availability shift regularly — quotes are time-sensitive</li>
+    <li>Solar pricing and availability shift regularly, quotes are time-sensitive</li>
     <li>Our partners prioritise homeowners with a firm install timeline</li>
     <li>Come back when you're within 3 months of your target install date</li>
   </ul>
@@ -999,7 +1042,7 @@ body::after{
 
 <div class="dq-page" id="dq-budget">
   <div class="dq-icon">💰</div>
-  <div class="dq-title">Your Budget Needs to Be ₦1.5M+ for a Full Solar System</div>
+  <div class="dq-title">Your Budget Is Not Highe Enough For A Full Solar System</div>
   <div class="dq-body">A properly sized solar system that covers a Nigerian home's energy needs starts at approximately ₦1,500,000 installed. Systems below this threshold often underperform and lead to poor outcomes.</div>
   <ul class="dq-reason-box">
     <li>Undersized systems burn out faster and waste your investment</li>
@@ -1012,9 +1055,9 @@ body::after{
 
 <div class="dq-page" id="dq-quotation">
   <div class="dq-icon">📋</div>
-  <div class="dq-title">No Problem — Come Back When You're Ready</div>
+  <div class="dq-title">No Problem, Come Back When You're Ready</div>
   <div class="dq-body">We only connect homeowners with our certified installers when they're genuinely open to reviewing a quotation. This protects your time and the installer's.</div>
-  <div class="dq-body">When you're ready to receive a personalised recommendation, come back and complete the assessment — it takes less than 3 minutes.</div>
+  <div class="dq-body">When you're ready to receive a personalised recommendation, come back and complete the assessment, it takes less than 3 minutes.</div>
   <a href="https://wa.me/2347071194277" class="dq-alt-btn" target="_blank">Chat With Us On WhatsApp →</a>
 </div>
 
@@ -1024,6 +1067,20 @@ body::after{
   <div class="dq-body">Since you're already in active discussions with an installer, we don't want to create confusion or split your focus. We work best with homeowners who haven't yet committed to a provider.</div>
   <div class="dq-body">If your current discussions don't work out, or if you'd like a second opinion on a proposal you've received, come back and we'll match you with one of our certified partners.</div>
   <a href="https://wa.me/2347071194277?text=Hi, I have a solar quote and would like a second opinion" class="dq-alt-btn" target="_blank">Get a Second Opinion on WhatsApp →</a>
+</div>
+
+
+<div class="dq-page" id="dq-proof-of-funds">
+  <div class="dq-icon">💰</div>
+  <div class="dq-title">Budget Not Immediately Accessible</div>
+  <div class="dq-body">Our certified installers only work with homeowners who can confirm their budget is ready. This protects your time and theirs a site visit only makes sense when the project can actually proceed.</div>
+  <ul class="dq-reason-box">
+    <li>A certified installer cannot schedule a site visit without confirmed budget availability</li>
+    <li>Our system is designed for homeowners who are financially ready to proceed</li>
+    <li>This ensures you get a serious, committed installer not just a quote collector</li>
+  </ul>
+  <div class="dq-body">When your budget is ready and you can confirm it in writing, come back and complete the assessment. We will match you with the right installer immediately.</div>
+  <a href="https://wa.me/2348029234994?text=Hi, I want to discuss my solar budget before completing the assessment." class="dq-alt-btn" target="_blank">Message Us on WhatsApp →</a>
 </div>
 
 <!-- ══════════════════════════════════
@@ -1041,7 +1098,7 @@ body::after{
 <div class="result-page" id="resultGreen">
 
   <div class="result-hero green">
-    <div class="result-badge green">✓ Qualified — Home Suitable for Solar</div>
+    <div class="result-badge green">✓ Qualified - Home Suitable for Solar</div>
     <div class="result-title" id="rg-title">Your Home Qualifies. Here's Your ROI.</div>
     <div class="result-sub" id="rg-sub">Based on your answers, your home passes all 8 quality gates. Here are your personalised solar financial results.</div>
     <div class="roi-grid">
@@ -1213,6 +1270,8 @@ document.querySelectorAll('.q-card').forEach(card => {
         cost: opt.dataset.cost,
         battery: opt.dataset.battery,
         safe: opt.dataset.safe,
+        size: opt.dataset.size || null,
+        budgetLabel: opt.dataset.budgetLabel || null,
       };
     });
   });
@@ -1246,31 +1305,38 @@ function nextQ(qNum) {
     }
   }
 
-  // Q4: Budget gate — must be ₦1.5M+
+  // Q4: Budget gate — disqualify under ₦1.5M
   if (qNum === 4) {
     if (ans.val === 'under500k' || ans.val === '500k-1m' || ans.val === '1m-1.5m') {
       showDQ('dq-budget'); return;
     }
   }
 
-  // Q5: Open to quotation gate
+  // Q5: Proof of Funds gate — "few days" and "discuss first" disqualify
   if (qNum === 5) {
+    if (ans.val === 'proof-few-days' || ans.val === 'proof-discuss') {
+      showDQ('dq-proof-of-funds'); return;
+    }
+  }
+
+  // Q6: Open to quotation gate (was Q5)
+  if (qNum === 6) {
     if (ans.val === 'no') {
       showDQ('dq-quotation'); return;
     }
   }
 
-  // Q6: Already with installer gate
-  if (qNum === 6) {
+  // Q7: Already with installer gate (was Q6)
+  if (qNum === 7) {
     if (ans.val === 'in-talks' || ans.val === 'have-price') {
       showDQ('dq-installer'); return;
     }
   }
 
   // Safety flag tracking (Q8–Q10)
-  if (qNum === 8 && ans.safe === '0') state.safetyFlags.push('Roof condition needs inspection before installation');
-  if (qNum === 9 && ans.safe === '0') state.safetyFlags.push('Shading on your roof may reduce system output — needs site assessment');
-  if (qNum === 10 && ans.safe === '0') state.safetyFlags.push('Electrical issues detected — wiring inspection required before installation');
+  if (qNum === 9 && ans.safe === '0') state.safetyFlags.push('Roof condition needs inspection before installation');
+  if (qNum === 10 && ans.safe === '0') state.safetyFlags.push('Shading on your roof may reduce system output — needs site assessment');
+  if (qNum === 11 && ans.safe === '0') state.safetyFlags.push('Electrical issues detected — wiring inspection required before installation');
 
   // Advance to next question
   if (qNum < 13) showQ(qNum + 1);
@@ -1354,10 +1420,19 @@ async function submitForm() {
   const isAmber = state.safetyFlags.length > 0;
 
   // ── WEBHOOK ──
+  // Extract system size and budget from new Q4
+  const q4ans = state.answers['q4'];
+  const systemSize   = q4ans?.size   || q4ans?.val || 'Not specified';
+  const budgetRange  = q4ans?.budgetLabel || 'Not specified';
+  const proofStatus  = state.answers['q5']?.val || 'Not specified';
+
   const payload = {
     firstName: fn,
     whatsapp: wa,
     location: loc,
+    systemSize: systemSize,
+    budgetRange: budgetRange,
+    proofOfFunds: proofStatus,
     answers: state.answers,
     safetyFlags: state.safetyFlags,
     leadStatus: isAmber ? 'yellow' : 'green',
@@ -1419,9 +1494,9 @@ function showGreenResult(payback, monthly, roi, cumSavings, sysCost, monthlyTota
   document.getElementById('rg-breakeven').textContent = breakEven > 0 ? 'Year ' + breakEven : '< 3 years';
 
   // Safety scores
-  const roofSafe = state.answers['q8']?.safe === '1';
-  const shadeSafe = state.answers['q9']?.safe === '1';
-  const elecSafe = state.answers['q10']?.safe === '1';
+  const roofSafe = state.answers['q9']?.safe === '1';
+  const shadeSafe = state.answers['q10']?.safe === '1';
+  const elecSafe = state.answers['q11']?.safe === '1';
 
   setScore('structural', roofSafe ? 95 : 70, roofSafe ? '95%' : '70%', roofSafe ? 'green' : 'gold');
   setScore('electrical', elecSafe ? 95 : 65, elecSafe ? '95%' : '65%', elecSafe ? 'green' : 'gold');
@@ -1445,7 +1520,7 @@ function showGreenResult(payback, monthly, roi, cumSavings, sysCost, monthlyTota
   });
 
   // WhatsApp CTA
-  const msg = `Hi! I just completed the Elup Profound Solar ROI Assessment and my home QUALIFIED (Green). My results: ${payback.toFixed(1)}-year payback, ₦${Math.round(monthly).toLocaleString()}/month savings. I'd like to book my free energy assessment. My name is ${document.getElementById('firstName').value}.`;
+  const msg = `Hi! I just completed the Tubalcain Solar ROI Assessment and my home QUALIFIED (Green). My results: ${payback.toFixed(1)}-year payback, ₦${Math.round(monthly).toLocaleString()}/month savings. I'd like to book my free energy assessment. My name is ${document.getElementById('firstName').value}.`;
   document.getElementById('greenCTA').href = `https://wa.me/2348024577725?text=${encodeURIComponent(msg)}`;
 
   document.getElementById('resultGreen').classList.add('show');
@@ -1481,7 +1556,7 @@ function showAmberResult(payback, monthly, name) {
     issueList.appendChild(li);
   });
 
-  const msg = `Hi! I completed the Elup Profound Solar ROI Assessment. My home got a YELLOW result — some areas need checking. I'd like to book a free professional home assessment. My name is ${name}.`;
+  const msg = `Hi! I completed the Tubalcain Solar ROI Assessment. My home got a YELLOW result, some areas need checking. I'd like to book a free professional home assessment. My name is ${name}.`;
   document.getElementById('amberCTA').href = `https://wa.me/2348024577725?text=${encodeURIComponent(msg)}`;
 
   document.getElementById('resultAmber').classList.add('show');
