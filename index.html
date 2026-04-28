@@ -833,7 +833,7 @@ body::after{
         <div class="option-sub">I have the funds but need a short time to prepare the documentation</div>
       </div>
     </label>
-    <label class="option" data-val="proof-few-days" data-disqualify="false">
+    <label class="option" data-val="proof-few-days">
       <div class="option-radio"></div>
       <div>
         <div class="option-text">I'll need a few days</div>
@@ -1457,7 +1457,7 @@ function nextQ(qNum) {
 
   // Q5: Proof of Funds gate — "few days" and "discuss first" disqualify
   if (qNum === 5) {
-    if (ans.val === 'proof-few-days' || ans.val === 'proof-discuss') {
+    if (ans.val === '' || ans.val === 'proof-discuss') {
       showDQ('dq-proof-of-funds'); return;
     }
   }
