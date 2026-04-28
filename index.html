@@ -16,6 +16,15 @@ fbq('init','1328786468999034');fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1328786468999034&ev=PageView&noscript=1"/></noscript>
 
+  <!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62DKYP07HR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-62DKYP07HR');
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -1352,6 +1361,80 @@ document.querySelectorAll('.q-card').forEach(card => {
   });
 });
 
+
+
+// ══════════════════════════════════════════════════════
+// GA4 FUNNEL TRACKING — Solar Lead Qualifier v2
+// Every drop-off, advance, and conversion is tracked.
+// View in GA4: Reports → Engagement → Events
+// ══════════════════════════════════════════════════════
+ 
+const Q_LABELS = {
+  'q1':    'Q1 — Monthly power spend',
+  'q-loc': 'Q2 — City / location',
+  'q2':    'Q3 — Property ownership',
+  'q3':    'Q4 — Install timeline',
+  'q4':    'Q5 — Budget & system size',
+  'q5':    'Q6 — Proof of funds',
+  'q6':    'Q7 — Open to quotation',
+  'q7':    'Q8 — Already with installer',
+  'q8':    'Q9 — Roof age',
+  'q9':    'Q10 — Roof shading',
+  'q10':   'Q11 — Sunlight hours',
+  'q11':   'Q12 — Electrical condition',
+  'q12':   'Q13 — Battery preference',
+  'q13':   'Q14 — Contact details',
+};
+ 
+const DQ_LABELS = {
+  'dq-spend':          'Low energy spend (under ₦30k)',
+  'dq-location':       'Out of service area',
+  'dq-ownership':      'No property ownership / landlord permission',
+  'dq-timeline':       'Timeline too long or no timeline',
+  'dq-budget':         'Budget below ₦1.5M',
+  'dq-proof-of-funds': 'Cannot confirm budget in writing',
+  'dq-quotation':      'Not open to receiving a quotation',
+  'dq-installer':      'Already in talks with another installer',
+};
+ 
+function trackEvent(eventName, params) {
+  if (typeof gtag !== 'function') return;
+  gtag('event', eventName, Object.assign({ event_category: 'Solar Qualifier Funnel' }, params || {}));
+}
+ 
+function trackQuestionView(qId) {
+  var label = Q_LABELS[qId] || qId;
+  trackEvent('qualifier_question_viewed', { event_label: label, question_id: qId, question_label: label });
+}
+ 
+function trackQuestionAnswered(qId, answerVal) {
+  var label = Q_LABELS[qId] || qId;
+  trackEvent('qualifier_question_answered', { event_label: label, question_id: qId, question_label: label, answer_value: answerVal });
+}
+ 
+function trackDisqualification(dqId, triggeredAtQ, answerVal) {
+  var dqLabel = DQ_LABELS[dqId] || dqId;
+  var qLabel  = Q_LABELS[triggeredAtQ] || triggeredAtQ;
+  trackEvent('qualifier_disqualified', { event_label: dqLabel, disqualification_reason: dqLabel, triggered_at_question: qLabel, answer_that_triggered: answerVal });
+  trackEvent('funnel_drop_off', { event_label: 'Disqualified: ' + dqLabel, drop_off_point: qLabel, reason: dqLabel });
+}
+ 
+function trackConversion(resultType, systemCost, city) {
+  trackEvent('qualifier_completed', { event_label: resultType === 'green' ? 'Qualified — Green' : 'Partial — Amber', result_type: resultType, estimated_system_value: systemCost, lead_city: city || 'Unknown', value: systemCost, currency: 'NGN' });
+  trackEvent('generate_lead', { event_label: 'Solar Lead Qualifier — ' + resultType, value: systemCost, currency: 'NGN' });
+}
+ 
+function trackWhatsAppClick(resultType) {
+  trackEvent('whatsapp_cta_clicked', { event_label: 'WhatsApp click — ' + resultType + ' result', result_type: resultType });
+}
+ 
+var _furthestQ = 'q1';
+window.addEventListener('beforeunload', function() {
+  if (!state.completed) {
+    trackEvent('qualifier_abandoned', { event_label: 'Abandoned at: ' + (Q_LABELS[_furthestQ] || _furthestQ), furthest_question_reached: _furthestQ });
+  }
+});
+  
 
 // ══════════════════════════════════════════
 // LOCATION GATE
