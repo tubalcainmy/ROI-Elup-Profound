@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Find Out If Solar Makes Financial Sense For Your Home Free 3-Minute Assessment</title>
+<title>Find Out If Solar Makes Financial Sense For Your Home — Free 3-Minute Assessment</title>
 
 <!-- Meta Pixel -->
 <script>
@@ -585,7 +585,7 @@ body::after{
 <!-- ── PROGRESS ── -->
 <div class="progress-wrap" id="progressWrap" style="display:none;">
   <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-  <div class="progress-label" id="progressLabel">0 / 14</div>
+  <div class="progress-label" id="progressLabel">0 / 13</div>
 </div>
 
 <!-- ══════════════════════════════════
@@ -626,39 +626,61 @@ body::after{
   <button class="next-btn" id="q1-next" disabled onclick="nextQ(1)">Continue <span class="arrow">→</span></button>
 </div>
 
-<!-- Q-LOC: Location gate — filters out-of-area leads before Q2 -->
+
+<!-- Q-LOC: Location gate — inserted between Q1 and Q2 -->
 <div class="q-card" id="q-loc">
   <div class="q-num">Question 2 of 14</div>
   <div class="q-text">Which city is the property where you want to install solar?</div>
-  <div class="q-hint">We currently serve specific cities across Nigeria. This confirms we have a certified installer in your area.</div>
+  <div class="q-hint">We currently serve specific cities across Nigeria. This confirms we have a certified installer active in your area.</div>
   <div class="options" id="qloc-opts">
     <label class="option" data-val="lagos-ikeja" data-city="Lagos — Ikeja &amp; Surroundings">
       <div class="option-radio"></div>
-      <div><div class="option-text">Lagos - Ikeja, Ogba, Agege, Ifako, Agidingbi</div><div class="option-sub">Mainland Ikeja axis</div></div>
+      <div>
+        <div class="option-text">Lagos — Ikeja, Ogba, Agege, Ifako, Agidingbi</div>
+        <div class="option-sub">Mainland Ikeja axis</div>
+      </div>
     </label>
     <label class="option" data-val="lagos-island" data-city="Lagos — Island &amp; Lekki">
       <div class="option-radio"></div>
-      <div><div class="option-text">Lagos - VI, Lekki, Ajah, Ikoyi, Oniru</div><div class="option-sub">Island and Lekki corridor</div></div>
+      <div>
+        <div class="option-text">Lagos — VI, Lekki, Ajah, Ikoyi, Oniru</div>
+        <div class="option-sub">Island and Lekki corridor</div>
+      </div>
     </label>
-    <label class="option" data-val="abuja" data-city="Abuja">
+    <!--<label class="option" data-val="abuja" data-city="Abuja">
       <div class="option-radio"></div>
-      <div><div class="option-text">Abuja - FCT</div><div class="option-sub">Wuse, Maitama, Gwarinpa, Kubwa, Lugbe</div></div>
-    </label>
-    <label class="option" data-val="ph" data-city="Port Harcourt">
+      <div>
+        <div class="option-text">Abuja — FCT</div>
+        <div class="option-sub">Wuse, Maitama, Gwarinpa, Kubwa, Lugbe</div>
+      </div>
+    </label>-->
+    <!--<label class="option" data-val="ph" data-city="Port Harcourt">
       <div class="option-radio"></div>
-      <div><div class="option-text">Port Harcourt - Rivers State</div><div class="option-sub">GRA, Trans Amadi, Rumuola, Eleme</div></div>
-    </label>
-    <label class="option" data-val="benin" data-city="Benin City">
+      <div>
+        <div class="option-text">Port Harcourt — Rivers State</div>
+        <div class="option-sub">GRA, Trans Amadi, Rumuola, Eleme</div>
+      </div>
+    </label>-->
+    <!--<label class="option" data-val="benin" data-city="Benin City">
       <div class="option-radio"></div>
-      <div><div class="option-text">Benin City - Edo State</div><div class="option-sub">GRA, Uselu, Ugbowo, Sapele Road</div></div>
-    </label>
-    <label class="option" data-val="warri" data-city="Warri">
+      <div>
+        <div class="option-text">Benin City — Edo State</div>
+        <div class="option-sub">GRA, Uselu, Ugbowo, Sapele Road</div>
+      </div>
+    </label>-->
+    <!--<label class="option" data-val="warri" data-city="Warri">
       <div class="option-radio"></div>
-      <div><div class="option-text">Warri - Delta State</div><div class="option-sub">Effurun, Okumagba, Uvwie</div></div>
-    </label>
+      <div>
+        <div class="option-text">Warri — Delta State</div>
+        <div class="option-sub">Effurun, Okumagba, Uvwie</div>
+      </div>
+    </label>-->
     <label class="option" data-val="other" data-city="Other city">
       <div class="option-radio"></div>
-      <div><div class="option-text">Another city not listed here</div><div class="option-sub">We may not have coverage in your area</div></div>
+      <div>
+        <div class="option-text">Another city not listed here</div>
+        <div class="option-sub">We may not have coverage in your area yet</div>
+      </div>
     </label>
   </div>
   <button class="next-btn" id="qloc-next" disabled onclick="nextQLoc()">Continue <span class="arrow">→</span></button>
@@ -718,7 +740,7 @@ body::after{
     </label>
     <label class="option" data-val="info-only">
       <div class="option-radio"></div>
-      <div><div class="option-text">Just gathering information, no firm timeline</div></div>
+      <div><div class="option-text">Just gathering information — no firm timeline</div></div>
     </label>
   </div>
   <button class="next-btn" id="q3-next" disabled onclick="nextQ(3)">Continue <span class="arrow">→</span></button>
@@ -728,7 +750,7 @@ body::after{
 <div class="q-card" id="q4">
   <div class="q-num">Question 5 of 14</div>
   <div class="q-text">What is your budget for the solar installation?</div>
-  <div class="q-hint">Select your budget range. The system size you can install is shown under each option, this helps match you with the right certified installer.</div>
+  <div class="q-hint">Select your budget range. The system size you can install is shown under each option this helps match you with the right certified installer.</div>
   <div class="options" id="q4-opts">
     <label class="option" data-val="under500k" data-cost="350000" data-size="Below minimum" data-budget-label="Under ₦500,000">
       <div class="option-radio"></div>
@@ -740,18 +762,18 @@ body::after{
     <label class="option" data-val="500k-1m" data-cost="750000" data-size="Below minimum" data-budget-label="₦500,000 – ₦1,000,000">
       <div class="option-radio"></div>
       <div>
-        <div class="option-text">₦500,000 - ₦1,000,000</div>
+        <div class="option-text">₦500,000 – ₦1,000,000</div>
         <div class="option-sub">2kWh - 2000W . Portable power stations</div>
       </div>
     </label>
     <label class="option" data-val="1m-1.5m" data-cost="1250000" data-size="Below minimum" data-budget-label="₦1,000,000 – ₦1,500,000">
       <div class="option-radio"></div>
       <div>
-        <div class="option-text">₦1,000,000 - ₦1,500,000</div>
+        <div class="option-text">₦1,000,000 – ₦1,500,000</div>
         <div class="option-sub">1kVA - 2kVA . Lights, fans, TV, and laptop charging</div>
       </div>
     </label>
-    <label class="option" data-val="2m-5m" data-cost="3500000" data-size="2.5 – 5 kVA" data-budget-label="₦2,000,000 – ₦5,000,000">
+    <label class="option" data-val="2m-5m" data-cost="1750000" data-size="2.5 – 5 kVA" data-budget-label="₦2,000,000 – ₦5,000,000">
       <div class="option-radio"></div>
       <div>
         <div class="option-text">₦2,000,000 - ₦5,000,000</div>
@@ -769,7 +791,7 @@ body::after{
       <div class="option-radio"></div>
       <div>
         <div class="option-text">₦5,800,000 – ₦7,500,000</div>
-        <div class="option-sub">System size: 7.5 - 10 kVA · Large home — full house power</div>
+        <div class="option-sub">System size: 7.5 – 10 kVA · Large home — full house power</div>
       </div>
     </label>
     <label class="option" data-val="over7.5m" data-cost="7500000" data-size="10 kVA+" data-budget-label="₦7,500,000+">
@@ -782,7 +804,7 @@ body::after{
     <label class="option" data-val="not-sure-budget" data-cost="2000000" data-size="To be assessed" data-budget-label="Not sure yet">
       <div class="option-radio"></div>
       <div>
-        <div class="option-text">Not sure yet - I need a quote first</div>
+        <div class="option-text">Not sure yet, I need a quote first</div>
         <div class="option-sub">A certified installer will assess your home and recommend the right system and budget</div>
       </div>
     </label>
@@ -832,20 +854,20 @@ body::after{
 <!-- Q6: Open to quotation gate -->
 <div class="q-card" id="q6">
   <div class="q-num">Question 7 of 14</div>
-  <div class="q-text">If your home checks out, are you ready to make a decision and sign within 90 days?</div>
+  <div class="q-text">If your home checks out, are you open to receiving a personalised solar quotation from a certified installer in your city?</div>
   <div class="q-hint">No pressure, no obligation. Our partners only contact homeowners who are genuinely ready to review a proposal.</div>
   <div class="options" id="q6-opts">
     <label class="option" data-val="yes">
       <div class="option-radio"></div>
-      <div><div class="option-text">Yes, definitely</div></div>
+      <div><div class="option-text">Yes, send me a quotation</div></div>
     </label>
     <label class="option" data-val="maybe">
       <div class="option-radio"></div>
-      <div><div class="option-text">Probably, but I need to discuss with family</div></div>
+      <div><div class="option-text">Maybe, I'd like to see the options first</div></div>
     </label>
     <label class="option" data-val="no">
       <div class="option-radio"></div>
-      <div><div class="option-text">No, I'm just gathering information</div></div>
+      <div><div class="option-text">No, I'm not ready to receive a quotation</div></div>
     </label>
   </div>
   <button class="next-btn" id="q6-next" disabled onclick="nextQ(6)">Continue <span class="arrow">→</span></button>
@@ -854,12 +876,12 @@ body::after{
 <!-- Q7: Already with installer gate -->
 <div class="q-card" id="q7">
   <div class="q-num">Question 8 of 14</div>
-  <div class="q-text">Are you currently comparing quotes from other installers?</div>
+  <div class="q-text">Are you currently in active discussions with another solar installer?</div>
   <div class="q-hint">We connect you with certified installers who serve homeowners who haven't yet committed to another provider.</div>
   <div class="options" id="q7-opts">
     <label class="option" data-val="no-installer">
       <div class="option-radio"></div>
-      <div><div class="option-text">No, you'll be the first</div></div>
+      <div><div class="option-text">No, I haven't spoken to any installer yet</div></div>
     </label>
     <label class="option" data-val="browsing">
       <div class="option-radio"></div>
@@ -867,11 +889,11 @@ body::after{
     </label>
     <label class="option" data-val="have-price">
       <div class="option-radio"></div>
-      <div><div class="option-text">Yes, but I'm open to comparing</div></div>
+      <div><div class="option-text">I have a price but am open to compare options</div></div>
     </label>
     <label class="option" data-val="in-talks">
       <div class="option-radio"></div>
-      <div><div class="option-text">Yes, and I'm close to signing with someone</div></div>
+      <div><div class="option-text">Yes, I'm in active talks / about to sign with someone</div></div>
     </label>
   </div>
   <button class="next-btn" id="q7-next" disabled onclick="nextQ(7)">Continue <span class="arrow">→</span></button>
@@ -910,7 +932,7 @@ body::after{
 <div class="q-card" id="q9">
   <div class="q-num">Question 10 of 14</div>
   <div class="q-text">What is the current condition of your roof?</div>
-  <div class="q-hint">Solar panels are mounted on the roof, a weak or leaking roof must be repaired before installation.</div>
+  <div class="q-hint">Solar panels are mounted on the roof a weak or leaking roof must be repaired before installation.</div>
   <div class="options" id="q9-opts">
     <label class="option" data-val="solid" data-safe="1">
       <div class="option-radio"></div>
@@ -934,7 +956,7 @@ body::after{
 
 <!-- Q9: Shading -->
 <div class="q-card" id="q10">
-  <div class="q-num">Question 10 of 14</div>
+  <div class="q-num">Question 11 of 14</div>
   <div class="q-text">Are there trees or tall buildings that significantly shade your roof?</div>
   <div class="q-hint">Shading reduces panel output. Our installer will assess the exact impact during the site visit.</div>
   <div class="options" id="q10-opts">
@@ -960,7 +982,7 @@ body::after{
 
 <!-- Q10: Electrical issues -->
 <div class="q-card" id="q11">
-  <div class="q-num">Question 11 of 14</div>
+  <div class="q-num">Question 12 of 14</div>
   <div class="q-text">Has your home experienced any of the following electrical problems?</div>
   <div class="q-hint">Select the most accurate description.</div>
   <div class="options" id="q11-opts">
@@ -992,9 +1014,9 @@ body::after{
 
 <!-- Q12: Battery type preference -->
 <div class="q-card" id="q12">
-  <div class="q-num">Question 12 of 14</div>
+  <div class="q-num">Question 13 of 14</div>
   <div class="q-text">Do you have a battery preference for your solar system?</div>
-  <div class="q-hint">Battery type affects your system's lifespan and replacement schedule, this goes into your ROI calculation.</div>
+  <div class="q-hint">Battery type affects your system's lifespan and replacement schedule — this goes into your ROI calculation.</div>
   <div class="options" id="q12-opts">
     <label class="option" data-val="lithium" data-battery="lithium">
       <div class="option-radio"></div>
@@ -1006,7 +1028,7 @@ body::after{
     </label>
     <label class="option" data-val="battery-unsure" data-battery="lithium">
       <div class="option-radio"></div>
-      <div><div class="option-text">Not sure, let the installer recommend</div></div>
+      <div><div class="option-text">Not sure — let the installer recommend</div></div>
     </label>
   </div>
   <button class="next-btn" id="q12-next" disabled onclick="nextQ(12)">Continue <span class="arrow">→</span></button>
@@ -1014,7 +1036,7 @@ body::after{
 
 <!-- Q13: Contact info -->
 <div class="q-card" id="q13">
-  <div class="q-num">Question 13 of 14</div>
+  <div class="q-num">Question 14 of 14</div>
   <div class="q-text">Where should we send your personalised ROI result and connect you with an installer?</div>
   <div class="q-hint">A certified installer in your city will contact you via WhatsApp within the hour. Your details are never shared with third parties.</div>
 
@@ -1039,25 +1061,12 @@ body::after{
      DISQUALIFICATION PAGES
 ═══════════════════════════════════ -->
 
-<div class="dq-page" id="dq-location">
-  <div class="dq-icon">📍</div>
-  <div class="dq-title">We Don't Have Coverage in Your Area Yet</div>
-  <div class="dq-body">We currently only serve homeowners in Lagos. We do not have a certified installer confirmed for your city at this time.</div>
-  <ul class="dq-reason-box">
-    <li>Each city requires a verified certified installer on the ground</li>
-    <li>We are expanding to new cities every month</li>
-    <li>Leave your details and we will notify you when your city is active</li>
-  </ul>
-  <div class="dq-body">We are growing fast. If you would like to be the first to know when we launch in your area, message us on WhatsApp and we will add you to our waitlist.</div>
-  <a href="https://wa.me/2348029234994?text=Hi, I am interested in solar but my city is not yet covered. Please add me to your waitlist." class="dq-alt-btn" target="_blank">Join the Waitlist on WhatsApp →</a>
-</div>
-
 <div class="dq-page" id="dq-spend">
   <div class="dq-icon">💡</div>
   <div class="dq-title">Solar May Not Be Right for You Yet</div>
   <div class="dq-body">Based on your current energy spend, a full solar installation is unlikely to give you a strong return on investment right now. The payback period would be too long to make financial sense.</div>
   <ul class="dq-reason-box">
-    <li>Combined spend below ₦30,000/month, ROI window exceeds 10 years</li>
+    <li>Combined spend below ₦30,000/month ROI window exceeds 10 years</li>
     <li>Solar investment is most profitable for homeowners spending ₦30k+ monthly</li>
     <li>Your energy costs don't yet justify a ₦1.5M+ system investment</li>
   </ul>
@@ -1074,16 +1083,16 @@ body::after{
     <li>Installers require documented permission before any work begins</li>
     <li>Getting landlord permission is often simpler than expected</li>
   </ul>
-  <div class="dq-body">If you can obtain written permission from your landlord, come back and complete this assessment, many renters successfully install solar once they have it in writing.</div>
+  <div class="dq-body">If you can obtain written permission from your landlord, come back and complete this assessment many renters successfully install solar once they have it in writing.</div>
   <a href="https://wa.me/2347071194277?text=Hi, I'm a renter interested in solar. Can you help me understand the landlord permission process?" class="dq-alt-btn" target="_blank">Ask Us About the Permission Process →</a>
 </div>
 
 <div class="dq-page" id="dq-timeline">
   <div class="dq-icon">📅</div>
   <div class="dq-title">Come Back When You're Ready to Install</div>
-  <div class="dq-body">Our certified installers are best matched with homeowners who have a confirmed installation window. This ensures you get the most relevant pricing and availability.</div>
+  <div class="dq-body">Our certified installers are best matched with homeowners who have a confirmed installation window within 90 days. This ensures you get the most relevant pricing and availability.</div>
   <ul class="dq-reason-box">
-    <li>Solar pricing and availability shift regularly, quotes are time-sensitive</li>
+    <li>Solar pricing and availability shift regularly — quotes are time-sensitive</li>
     <li>Our partners prioritise homeowners with a firm install timeline</li>
     <li>Come back when you're within 3 months of your target install date</li>
   </ul>
@@ -1093,7 +1102,7 @@ body::after{
 
 <div class="dq-page" id="dq-budget">
   <div class="dq-icon">💰</div>
-  <div class="dq-title">Your Budget Is Not Highe Enough For A Full Solar System</div>
+  <div class="dq-title">Your Budget Is Not Highe Enough For a Full Solar System</div>
   <div class="dq-body">A properly sized solar system that covers a Nigerian home's energy needs starts at approximately ₦1,500,000 installed. Systems below this threshold often underperform and lead to poor outcomes.</div>
   <ul class="dq-reason-box">
     <li>Undersized systems burn out faster and waste your investment</li>
@@ -1108,7 +1117,7 @@ body::after{
   <div class="dq-icon">📋</div>
   <div class="dq-title">No Problem, Come Back When You're Ready</div>
   <div class="dq-body">We only connect homeowners with our certified installers when they're genuinely open to reviewing a quotation. This protects your time and the installer's.</div>
-  <div class="dq-body">When you're ready to receive a personalised recommendation, come back and complete the assessment, it takes less than 3 minutes.</div>
+  <div class="dq-body">When you're ready to receive a personalised recommendation, come back and complete the assessment it takes less than 3 minutes.</div>
   <a href="https://wa.me/2347071194277" class="dq-alt-btn" target="_blank">Chat With Us On WhatsApp →</a>
 </div>
 
@@ -1124,7 +1133,7 @@ body::after{
 <div class="dq-page" id="dq-proof-of-funds">
   <div class="dq-icon">💰</div>
   <div class="dq-title">Budget Not Immediately Accessible</div>
-  <div class="dq-body">Our certified installers only work with homeowners who can confirm their budget is ready. This protects your time and theirs a site visit only makes sense when the project can actually proceed.</div>
+  <div class="dq-body">Our certified installers only work with homeowners who can confirm their budget is ready. This protects your time and theirs — a site visit only makes sense when the project can actually proceed.</div>
   <ul class="dq-reason-box">
     <li>A certified installer cannot schedule a site visit without confirmed budget availability</li>
     <li>Our system is designed for homeowners who are financially ready to proceed</li>
@@ -1132,6 +1141,21 @@ body::after{
   </ul>
   <div class="dq-body">When your budget is ready and you can confirm it in writing, come back and complete the assessment. We will match you with the right installer immediately.</div>
   <a href="https://wa.me/2348029234994?text=Hi, I want to discuss my solar budget before completing the assessment." class="dq-alt-btn" target="_blank">Message Us on WhatsApp →</a>
+</div>
+
+
+<!-- DQ: Out of area -->
+<div class="dq-page" id="dq-location">
+  <div class="dq-icon">📍</div>
+  <div class="dq-title">We Don't Have Coverage in Your Area Yet</div>
+  <div class="dq-body">We currently only serve homeowners in Lagos, Abuja, Port Harcourt, Benin City, and Warri. We do not have a certified installer confirmed for your city at this time.</div>
+  <ul class="dq-reason-box">
+    <li>Each city requires a verified certified installer on the ground</li>
+    <li>We are expanding to new cities every month</li>
+    <li>Leave your details and we will notify you when your city becomes active</li>
+  </ul>
+  <div class="dq-body">If you would like to be the first to know when we launch in your area, message us on WhatsApp and we will add you to our waitlist.</div>
+  <a href="https://wa.me/2348029234994?text=Hi%2C%20I%20am%20interested%20in%20solar%20but%20my%20city%20is%20not%20yet%20covered.%20Please%20add%20me%20to%20your%20waitlist." class="dq-alt-btn" target="_blank">Join the Waitlist on WhatsApp →</a>
 </div>
 
 <!-- ══════════════════════════════════
@@ -1149,7 +1173,7 @@ body::after{
 <div class="result-page" id="resultGreen">
 
   <div class="result-hero green">
-    <div class="result-badge green">✓ Qualified - Home Suitable for Solar</div>
+    <div class="result-badge green">✓ Qualified — Home Suitable for Solar</div>
     <div class="result-title" id="rg-title">Your Home Qualifies. Here's Your ROI.</div>
     <div class="result-sub" id="rg-sub">Based on your answers, your home passes all 8 quality gates. Here are your personalised solar financial results.</div>
     <div class="roi-grid">
@@ -1214,7 +1238,7 @@ body::after{
   <!-- CTA -->
   <div class="cta-box">
     <div class="cta-heading">Your Next Step: Free Energy Assessment</div>
-    <div class="cta-sub">Before you spend ₦1M–₦4M on solar, you need an accurate energy load assessment to confirm the exact system size for your home. This is 100% free and takes about 2 minutes by WhatsApp.</div>
+    <div class="cta-sub">Before you spend ₦2M–₦7M on solar, you need an accurate energy load assessment to confirm the exact system size for your home. This is 100% free and takes about 2 minutes by WhatsApp.</div>
     <a href="#" class="cta-btn" id="greenCTA" target="_blank">
       Book My Free Energy Assessment →
     </a>
@@ -1230,7 +1254,7 @@ body::after{
 
   <div class="result-hero amber">
     <div class="result-badge amber">⚠ Proceed With Assessment First</div>
-    <div class="result-title">Your Home May Be Suitable. A Professional Check Is Needed</div>
+    <div class="result-title">Your Home May Be Suitable A Professional Check Is Needed</div>
     <div class="result-sub">Your energy spend and budget qualify you. However, our system flagged 1–2 home conditions that a certified installer should assess before installation begins.</div>
     <div class="roi-grid">
       <div class="roi-card highlight">
@@ -1258,7 +1282,7 @@ body::after{
     <a href="#" class="cta-btn amber" id="amberCTA" target="_blank">
       Request Free Home Assessment →
     </a>
-    <div class="guarantee-note">🔒 No obligation — they assess, then you decide</div>
+    <div class="guarantee-note">🔒 No obligation they assess, then you decide</div>
   </div>
 
 </div>
@@ -1297,11 +1321,9 @@ function showQ(n) {
 }
 
 function updateProgress(q) {
-  // q-loc sits between Q1 and Q2, so numbered Qs after Q1 are offset by 1
-  const displayStep = (q >= 2) ? q + 1 : q;
-  const pct = Math.round(((displayStep - 1) / state.totalQ) * 100);
+  const pct = Math.round(((q - 1) / state.totalQ) * 100);
   document.getElementById('progressFill').style.width = pct + '%';
-  document.getElementById('progressLabel').textContent = (displayStep-1) + ' / ' + state.totalQ;
+  document.getElementById('progressLabel').textContent = (q-1) + ' / ' + state.totalQ;
 }
 
 // ══ OPTION SELECTION ══
@@ -1330,20 +1352,33 @@ document.querySelectorAll('.q-card').forEach(card => {
   });
 });
 
-// ══ LOCATION GATE LOGIC ══
-const ACTIVE_CITIES = ['lagos-ikeja', 'lagos-island',];
+
+// ══════════════════════════════════════════
+// LOCATION GATE
+// ══════════════════════════════════════════
+
+// Cities with active confirmed installers
+// Add/remove city values here when coverage changes
+const ACTIVE_CITIES = [
+  'lagos-ikeja',
+  'lagos-island',
+  '',
+  '',
+  '',
+  ''
+];
 
 function nextQLoc() {
-  const opts = document.querySelectorAll('#qloc-opts .option.selected');
-  if (opts.length === 0) return;
-  const selected = opts[0];
+  const selected = document.querySelector('#qloc-opts .option.selected');
+  if (!selected) return;
+
   const cityVal  = selected.dataset.val;
   const cityName = selected.dataset.city;
 
   // Store city in state for webhook payload
   state.answers['city'] = { val: cityVal, name: cityName };
 
-  // Check if city is active
+  // Disqualify if city not in active list
   if (cityVal === 'other' || !ACTIVE_CITIES.includes(cityVal)) {
     showDQ('dq-location');
     return;
@@ -1353,25 +1388,24 @@ function nextQLoc() {
   showQCard('q2');
 }
 
-// Show a specific card by ID (for non-numbered cards like q-loc)
+// Show a card by its string ID (for non-numbered cards)
 function showQCard(id) {
   document.querySelectorAll('.q-card').forEach(c => c.classList.remove('active'));
   const card = document.getElementById(id);
-  if (card) {
-    card.classList.add('active');
-    // Update progress — q-loc is step 2 (1 completed)
-    if (id === 'q-loc') {
-      const pct = Math.round((1 / state.totalQ) * 100);
-      document.getElementById('progressFill').style.width = pct + '%';
-      document.getElementById('progressLabel').textContent = '1 / ' + state.totalQ;
-    }
-    document.getElementById('progressWrap').style.display = 'flex';
-    document.querySelector('.hero').style.display = 'none';
-    card.scrollIntoView({behavior:'smooth', block:'start'});
+  if (!card) return;
+  card.classList.add('active');
+  document.getElementById('progressWrap').style.display = 'flex';
+  document.querySelector('.hero').style.display = 'none';
+  // Progress for q-loc = step 2
+  if (id === 'q-loc') {
+    const pct = Math.round((1 / state.totalQ) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressLabel').textContent = '1 / ' + state.totalQ;
   }
+  card.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// Option selection for q-loc
+// Click handler for location options
 document.addEventListener('DOMContentLoaded', () => {
   const locOpts = document.querySelectorAll('#qloc-opts .option');
   locOpts.forEach(opt => {
@@ -1554,7 +1588,8 @@ async function submitForm() {
       monthlySpend: monthlyTotal,
     },
     submissionTime: new Date().toISOString(),
-    submissionURL: window.location.href,
+    city: state.answers.city ? state.answers.city.name : 'Not specified',
+  submissionURL: window.location.href,
   };
 
   // Generate a unique event ID for Facebook deduplication
@@ -1665,7 +1700,7 @@ function showAmberResult(payback, monthly, name) {
     issueList.appendChild(li);
   });
 
-  const msg = `Hi! I completed the Elup Profound Solar ROI Assessment. My home got a YELLOW result — some areas need checking. I'd like to book a free professional home assessment. My name is ${name}.`;
+  const msg = `Hi! I completed the Elup Profound Solar ROI Assessment. My home got a YELLOW result, some areas need checking. I'd like to book a free professional home assessment. My name is ${name}.`;
   document.getElementById('amberCTA').href = `https://wa.me/2348024577725?text=${encodeURIComponent(msg)}`;
 
   document.getElementById('resultAmber').classList.add('show');
