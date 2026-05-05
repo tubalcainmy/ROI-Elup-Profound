@@ -845,7 +845,7 @@ body::after{
     <label class="option" data-val="proof-few-days" data-disqualify="true">
       <div class="option-radio"></div>
       <div>
-        <div class="option-text">I'll need a few days</div>
+        <div class="option-text">Yes, only on installment</div>
         <div class="option-sub">Budget is not immediately accessible</div>
       </div>
     </label>
@@ -1687,7 +1687,7 @@ function nextQ(qNum) {
   // Q5: Proof of Funds gate — "few days" and "discuss first" disqualify
   if (qNum === 5) {
     trackQuestionAnswered('q5', ans.val);
-    if (ans.val === '' || ans.val === 'proof-discuss') {
+    if (ans.val === 'proof-few-days' || ans.val === 'proof-discuss') {
       trackDisqualification('dq-proof-of-funds', 'q5', ans.val);
       showDQ('dq-proof-of-funds'); return;
     }
