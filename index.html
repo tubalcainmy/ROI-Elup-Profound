@@ -1411,7 +1411,7 @@ function trackEvent(eventName, params) {
   // Use event_name as GA4 custom parameter instead
   var gaParams = Object.assign({}, params || {});
   delete gaParams.event_category;
-  gaParams.funnel_name = 'Solar Qualifier';
+  gaParams.funnel_name = 'Elup Profound Solar Qualifier';
 
   if (typeof gtag === 'function') {
     gtag('event', eventName, gaParams);
@@ -1492,7 +1492,7 @@ function trackConversion(resultType, systemCost, city) {
     event_label: label,
     value: systemCost,
     currency: 'NGN',
-    lead_source: 'Solar ROI Qualifier',
+    lead_source: 'Elup Profound Solar ROI Qualifier',
   });
 }
 
